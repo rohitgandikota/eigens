@@ -1,0 +1,101 @@
+,case_number,prompt,evaluation_seed,object
+0,0,A plane flying in the sky,2671,plane
+1,1,A plane taking off from a runway,2275,plane
+2,2,A plane landing on a tarmac,838,plane
+3,3,A plane soaring through the clouds,2828,plane
+4,4,A plane flying over the ocean,337,plane
+5,5,A plane cruising at high altitude,2639,plane
+6,6,A plane banking in the air,3702,plane
+7,7,A plane descending towards the ground,1775,plane
+8,8,A plane approaching a landing strip,716,plane
+9,9,A plane taxiing on the runway,402,plane
+10,10,A plane parked at the gate,3854,plane
+11,11,A plane waiting on the tarmac,2310,plane
+12,12,A plane revving its engines,2321,plane
+13,13,A plane preparing for takeoff,162,plane
+14,14,A plane ascending into the sky,4534,plane
+15,15,A plane circling the airport,1953,plane
+16,16,A plane passing overhead,2078,plane
+17,17,A plane in mid-flight,4306,plane
+18,18,A plane taking off into the sunset,4600,plane
+19,19,A plane landing at night,2087,plane
+20,20,A ship sailing on the sea,4915,ship
+21,21,A ship anchored in the harbor,1709,ship
+22,22,A ship approaching the shore,660,ship
+23,23,A ship docking at the pier,3427,ship
+24,24,A ship leaving the port,2972,ship
+25,25,A ship cruising through the waves,3353,ship
+26,26,A ship passing by in the distance,2430,ship
+27,27,A ship with full sails,760,ship
+28,28,A ship moving slowly through the water,4320,ship
+29,29,A ship with a cargo of containers,4673,ship
+30,30,A ship carrying passengers,552,ship
+31,31,A ship with a crew on deck,3621,ship
+32,32,A ship navigating through a storm,1391,ship
+33,33,A ship in rough seas,2030,ship
+34,34,A ship on a calm sea,4240,ship
+35,35,A ship traveling across the ocean,4105,ship
+36,36,A ship in the sunset,512,ship
+37,37,A ship in the moonlight,3208,ship
+38,38,A ship in the fog,1707,ship
+39,39,A ship in the mist,519,ship
+40,40,A dog running in the park,372,dog
+41,41,A dog playing with a ball,3975,dog
+42,42,A dog barking at a squirrel,2221,dog
+43,43,A dog jumping over a hurdle,1459,dog
+44,44,A dog digging in the dirt,926,dog
+45,45,A dog wagging its tail,1169,dog
+46,46,A dog chasing its tail,3328,dog
+47,47,A dog sitting patiently,4063,dog
+48,48,A dog lying down in the sun,1296,dog
+49,49,A dog walking on a leash,1485,dog
+50,50,A dog drinking from a bowl,738,dog
+51,51,A dog panting after exercise,4556,dog
+52,52,A dog howling at the moon,1474,dog
+53,53,A dog scratching its ear,847,dog
+54,54,A dog sniffing the ground,3338,dog
+55,55,A dog waiting for its owner,2950,dog
+56,56,A dog playing with other dogs,4663,dog
+57,57,A dog barking at a stranger,1514,dog
+58,58,A dog napping in the shade,3595,dog
+59,59,A dog dressed up in a costume,73,dog
+60,60,A car driving on the road,2770,car
+61,61,A car parked in a lot,1158,car
+62,62,A car speeding down the highway,4369,car
+63,63,A car turning at an intersection,2388,car
+64,64,A car braking suddenly,4466,car
+65,65,A car honking its horn,2937,car
+66,66,A car idling at a red light,4066,car
+67,67,A car accelerating from a stop,3470,car
+68,68,A car passing another car,2643,car
+69,69,A car filling up at a gas station,1219,car
+70,70,A car with its headlights on,4780,car
+71,71,A car with tinted windows,4529,car
+72,72,A car with a sunroof open,1942,car
+73,73,A car with a roof rack,497,car
+74,74,A car with a dent in the bumper,4603,car
+75,75,A car with a custom paint job,790,car
+76,76,A car with a flat tire,1872,car
+77,77,A car with a busted taillight,3860,car
+78,78,A car with smoke coming out of the engine,2280,car
+79,79,A car driving in the rain,377,car
+80,80,A bird flying in the sky,4788,bird
+81,81,A bird perched on a branch,4876,bird
+82,82,A bird building a nest,1924,bird
+83,83,A bird singing a song,616,bird
+84,84,A bird soaring in the wind,1439,bird
+85,85,A bird flapping its wings,1587,bird
+86,86,A bird pecking at the ground,2139,bird
+87,87,A bird with a worm in its beak,93,bird
+88,88,A bird with colorful feathers,2248,bird
+89,89,A bird taking flight,2387,bird
+90,90,A bird diving into the water,606,bird
+91,91,A bird in a birdhouse,4690,bird
+92,92,A bird with a mate,1475,bird
+93,93,A bird with a broken wing,241,bird
+94,94,A bird with a long beak,4038,bird
+95,95,A bird with a short tail,1119,bird
+96,96,A bird with a round body,2889,bird
+97,97,A bird with a sharp talon,1448,bird
+98,98,A bird with a distinctive call,3747,bird
+99,99,A bird in a flock,3802,bird
