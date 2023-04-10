@@ -1,5 +1,7 @@
 # Importance of Eigen Directions in Deep Neural Networks 
-# [PAPER](https://github.com/rohitgandikota/eigens/blob/main/editing-eigens-report.pdf)
+
+### [PAPER](https://github.com/rohitgandikota/eigens/blob/main/editing-eigens-report.pdf)
+
 Editing memory of large neural network models has been gaining a lot of attention with the recent advancements in Large Language Models (LLMs) and diffusion models. From copyright image take-downs to inappropriate image restrictions, memory editing has a wide variety of crucial applications for safer AI practices. 
 In this work, we address the task of memory editing in vision models through interventions. We also show that the attention heads in diffusion models act as a memory bank for concepts. By editing the knowledge of the models through intervention, one can avoid the overhead of expensive retraining of the large models.
 <div align='center'>
