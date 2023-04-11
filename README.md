@@ -26,7 +26,7 @@ To cite this work, please use the following bibtex:
 
 ```
 @misc{gandikota2023eigens,
-title	= {Importance of Eigen Directions in Deep Neural Networks },
+title	= {Importance of Eigen Directions in Deep Neural Networks},
 author	= {Rohit Gandikota},
 year	= {2023},
 URL	= {https://github.com/rohitgandikota/eigens}
