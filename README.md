@@ -21,7 +21,7 @@ We also find that this type of editing can be easily circumvented. Therefore fin
 <img src = 'images/diffusion_good.png'>
 </div>
 
-# Citating our work
+# Citing our work
 To cite this work, please use the following bibtex:
 
 ```
