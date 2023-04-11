@@ -20,3 +20,16 @@ We also find that this type of editing can be easily circumvented. Therefore fin
 <div align='center'>
 <img src = 'images/diffusion_good.png'>
 </div>
+
+# Citating our work
+To cite this work, please use the following bibtex:
+
+```
+@misc{45500,
+title	= {Importance of Eigen Directions in Deep Neural Networks },
+author	= {Rohit Gandikota},
+year	= {2023},
+URL	= {https://github.com/rohitgandikota/eigens}
+}
+
+```
