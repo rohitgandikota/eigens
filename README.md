@@ -25,7 +25,7 @@ We also find that this type of editing can be easily circumvented. Therefore fin
 To cite this work, please use the following bibtex:
 
 ```
-@misc{45500,
+@misc{gandikota2023eigens,
 title	= {Importance of Eigen Directions in Deep Neural Networks },
 author	= {Rohit Gandikota},
 year	= {2023},
