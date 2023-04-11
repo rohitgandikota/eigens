@@ -31,5 +31,4 @@ author	= {Rohit Gandikota},
 year	= {2023},
 URL	= {https://github.com/rohitgandikota/eigens}
 }
-
 ```
