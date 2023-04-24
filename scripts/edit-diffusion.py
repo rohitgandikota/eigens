@@ -102,7 +102,7 @@ def get_models(config_path, ckpt_path, devices):
 
     return model_orig, sampler_orig, model, sampler
 
-def train_esd(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, seperator=None, image_size=512, ddim_steps=50):
+def edit(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, seperator=None, image_size=512, ddim_steps=50):
     '''
     Function to train diffusion models to erase concepts from model weights
 
@@ -142,12 +142,6 @@ def train_esd(prompt, train_method, start_guidance, negative_guidance, iteration
     '''
     # PROMPT CLEANING
     word_print = prompt.replace(' ','')
-    if prompt == 'allartist':
-        prompt = "Kelly Mckernan, Thomas Kinkade, Ajin Demi Human, Alena Aenami, Tyler Edlin, Kilian Eng"
-    if prompt == 'i2p':
-        prompt = "hate, harassment, violence, suffering, humiliation, harm, suicide, sexual, nudity, bodily fluids, blood"
-    if prompt == "artifact":
-        prompt = "ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, mutation, mutated, extra limbs, extra legs, extra arms, disfigured, deformed, cross-eye, body out of frame, blurry, bad art, bad anatomy, blurred, text, watermark, grainy"
 
     if seperator is not None:
         words = prompt.split(seperator)
@@ -163,42 +157,9 @@ def train_esd(prompt, train_method, start_guidance, negative_guidance, iteration
     # choose parameters to train based on train_method
     parameters = []
     for name, param in model.model.diffusion_model.named_parameters():
-        # train all layers except x-attns and time_embed layers
-        if train_method == 'noxattn':
-            if name.startswith('out.') or 'attn2' in name or 'time_embed' in name:
-                pass
-            else:
-                print(name)
-                parameters.append(param)
-        # train only self attention layers
-        if train_method == 'selfattn':
-            if 'attn1' in name:
-                print(name)
-                parameters.append(param)
-        # train only x attention layers
-        if train_method == 'xattn':
-            if 'attn2' in name:
-                print(name)
-                parameters.append(param)
-        # train all layers
-        if train_method == 'full':
+        if 'attn2' in name:
             print(name)
             parameters.append(param)
-        # train all layers except time embed layers
-        if train_method == 'notime':
-            if not (name.startswith('out.') or 'time_embed' in name):
-                print(name)
-                parameters.append(param)
-        if train_method == 'xlayer':
-            if 'attn2' in name:
-                if 'output_blocks.6.' in name or 'output_blocks.8.' in name:
-                    print(name)
-                    parameters.append(param)
-        if train_method == 'selflayer':
-            if 'attn1' in name:
-                if 'input_blocks.4.' in name or 'input_blocks.7.' in name:
-                    print(name)
-                    parameters.append(param)
     # set model to train
     model.train()
     # create a lambda function for cleaner use of sampling code (only denoising till time step t)
@@ -244,7 +205,7 @@ def train_esd(prompt, train_method, start_guidance, negative_guidance, iteration
         e_0.requires_grad = False
         e_p.requires_grad = False
         # reconstruction loss for ESD objective from frozen model and conditional score of ESD model
-        loss = criteria(e_n.to(devices[0]), e_0.to(devices[0]) - (negative_guidance*(e_p.to(devices[0]) - e_0.to(devices[0])))) #loss = criteria(e_n, e_0) works the best try 5000 epochs
+        loss = criteria(e_n.to(devices[0]), e_0.to(devices[0])) #loss = criteria(e_n, e_0) works the best try 5000 epochs
         # update weights to erase the concept
         loss.backward()
         losses.append(loss.item())
@@ -290,7 +251,7 @@ def save_history(losses, name, word_print):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-                    prog = 'TrainESD',
+                    prog = 'Edit Diffusion Models',
                     description = 'Finetuning stable diffusion model to erase concepts using ESD method')
     parser.add_argument('--prompt', help='prompt corresponding to concept to erase', type=str, required=True)
     parser.add_argument('--train_method', help='method of training', type=str, required=True)
@@ -321,4 +282,4 @@ if __name__ == '__main__':
     image_size = args.image_size
     ddim_steps = args.ddim_steps
 
-    train_esd(prompt=prompt, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps)
+    edit(prompt=prompt, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps)
