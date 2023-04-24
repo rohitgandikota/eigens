@@ -104,7 +104,9 @@ def get_models(config_path, ckpt_path, devices):
 
 def edit(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, seperator=None, image_size=512, ddim_steps=50):
     '''
-    Function to train diffusion models to erase concepts from model weights
+    Function to train diffusion models to erase concepts from model weights 
+    
+    We take this from "Erasing Concept from Diffusion Models" and edit the objective function to fit to our training
 
     Parameters
     ----------
