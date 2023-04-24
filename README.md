@@ -15,7 +15,7 @@ Since, attentions in diffusion models are essentially FC layers, we try and edit
 <img src = 'images/diffusion_bad.png'>
 </div>
 
-We also find that this type of editing can be easily circumvented. Therefore finetuning the model weights similar to ["Erasing Concepts from Diffusion Models"](https://erasing.baulab.info) can lead to a finer and controllable effects. 
+We also find that this type of editing can be easily circumvented. Therefore finetuning the model weights similar to ["Erasing Concepts from Diffusion Models"](https://erasing.baulab.info) can lead to a finer and controllable effects. We edit the objective function to fit to our training. We replace their guidance-based objective function to a simple replacing objective. We find a significantly finer model knowledge editing with our new objective.
 
 <div align='center'>
 <img src = 'images/diffusion_good.png'>
